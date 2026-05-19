@@ -288,7 +288,25 @@ a:hover {
     width: 236px;
 }
 .table_login {
-    width: 200px;
+    width: auto;
     margin-left: auto;
     margin-right: auto;
+}
+
+.help_text {
+    display: block;
+    color: #777;
+    font-size: 12px;
+    white-space: pre-line;
+    text-align: left;
+    max-width: 220px;
+}
+
+.form_errors {
+    color: red;
+    font-size: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 2px 0 0 0;
+    text-align: left;
 }
