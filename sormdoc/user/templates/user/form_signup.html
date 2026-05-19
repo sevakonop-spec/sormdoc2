@@ -1,0 +1,10 @@
+<div>
+  <table class="table_login">
+    {% for field in form %}
+      <tr>
+        <td style="vertical-align: top;">{{ field.label }}</td>
+        <td>{{ field }} <pre>{{ field.help_text }}</pre></td>
+      </tr>
+    {% endfor %}
+  </table>
+</div>

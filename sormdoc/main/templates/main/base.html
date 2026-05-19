@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{%static 'css/stylesheet.css'%}" type="text/css">
+</head>
+<body class="gradient">
+    <nav class="menu">
+        <div class="nav">
+            <ul class="item_ul">
+                <li class="item_li">
+                    <a class="item_a" href="{% url 'main:index' %}">Главная страница</a>
+                </li>
+                <li class="item_li">
+                    <a class="item_a" href="1">Новости</a>
+                </li>
+                <li class="item_li">
+                    <a class="item_a" href="2">Вопрос-Ответ</a>
+                </li>
+                <li class="item_li">
+                    <a class="item_a" href="3">Технические средства</a>
+                </li>
+                <li class="item_li">
+                    <a class="item_a" href="3">Шаблоны документов</a>
+                </li>
+                <li class="item_li">
+                    <a class="item_a" href="3">Номативные правовые акты</a>
+                </li>
+                <li class="item_li">
+                    <a class="item_a" href="2">О нас</a>
+                </li>
+            </ul>
+        <div class="item_li_lk">
+            {% if user.username %}
+                <div class="dropdown">
+                    <a class="item_a" href="4">{{user.username}}</a>
+                    <div class="dropdown-content">
+                        <a class="item_a" href="{% url 'user:profile' %}">Настройки</a>
+                        <a class="item_a" href="{% url 'user:logout' %}">Выход</a>
+                    </div>
+                </div>
+
+
+            {% else %}
+                <div class="dropdown">
+                    <a class="item_a" href="4">Личный кабинет</a>
+                    <div class="dropdown-content">
+                        <a class="item_a" href="{% url 'user:login' %}">Вход</a>
+                        <a class="item_a" href="{% url 'user:signup' %}">Регистрация</a>
+                    </div>
+                </div>
+            {% endif %}
+
+        </div>
+        </div>
+    </nav>
+    <div class="for_logo">
+        <div class="logo"><img src="{% static 'images/logo.png'%}" alt="SORM DOC" height="100" width="100" title="SORM Doc"></div>
+        <div class="name_logo">СОРМ Док</div>
+        <div class="status"><p>Последняя синхронизация с реестром Роскомнадзора: <b style="color:{{rkn_color}}">{{rkn_date}}</b></p>
+            <p>Последняя синхронизация с реестром нумерации Россвязи: <b style="color:{{rossv_color}}">{{rossv_date}}</b></p></div>
+    </div>
+
+    {% block content %} {% endblock %}
+
+    <div class="down_section">
+        <div class="separator"></div>
+        <div class="conteiner_contacts">
+            <div class="contacts">
+                <p><b>Контактная информация</b></p>
+                <p>108801, Москва, спецобъект "Коммунарка"</p>
+                <p>8-800-777-77-77</p>
+                <p>contact@sormdoc.ru</p>
+            </div>
+            <div class="socials">
+                <p><b>Мы в социальных сетях</b></p>
+                <p>ВКонтакте</p>
+                <p>Telegram</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

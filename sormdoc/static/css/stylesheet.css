@@ -1,0 +1,294 @@
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: red;
+    text-decoration:underline;
+}
+
+.menu {
+    border-bottom: 1px solid #f0f0f0;
+    border-top: 1px solid #f0f0f0;
+    font-size: 14px;
+}
+
+.nav {
+    background: none;
+    box-sizing: border-box;
+    display: flex;
+    height: auto;
+    min-height: auto;
+    padding-top: 0;
+    position: inherit;
+    width: auto;
+    max-width: auto;
+    font-family: PT Sans Caption, sans-serif;
+
+}
+
+.item_ul {
+    display: flex;
+    position: relative;
+    top: -1px;
+}
+.item_li {
+    display: inline-block;
+    flex: 0 1 auto;
+    margin-right: 34px;
+}
+
+.item_a {
+    border-top: 3px solid transparent;
+    letter-spacing: inherit;
+    line-height: inherit;
+    padding: 13px 0 14px;
+    color: white;
+    display: block
+    text-decoration: none;
+}
+.item_a:hover {
+}
+.item_li_lk {
+    max-width: 30%;
+    min-height: 2em;
+    margin-left: auto;
+    margin-right: 0em;
+    font-size: 14px;
+    border-top: 3px solid transparent;
+    letter-spacing: inherit;
+    line-height: inherit;
+    padding: 13px 0 14px;
+    color: black;
+    display: block;
+    min-width: 120px;
+}
+.main_content {
+    font-family: PT Sans,sans-serif;
+    color: #000;
+    font-size: 18px;
+    line-height: 24px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.block {
+    background-color: transparent;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.search {
+    grid-column: 1/span 3;
+    grid-row: 1;
+    width: 90%;
+    max-height: 300px;
+    margin: 0 auto;
+}
+.news {
+    grid-column: 1;
+    grid-row: 2;
+}
+.reclam_my {
+    grid-column: 2;
+    grid-row: 2;
+}
+.npa {
+    grid-column: 3;
+    grid-row: 2/ span 2;
+}
+.faqs {
+    grid-column: 1;
+    grid-row: 3;
+}
+.example {
+    grid-column: 2;
+    grod-row: 3;
+}
+.reclam {
+    grid-column: 1/span 3;
+    grid-row: 4;
+}
+.ts {
+    grid-column: 1/span 3;
+    grid-row: 5;
+}
+
+.for_logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.name_logo {
+    font-family: PT Times New Roman;
+    font-size: 48px;
+    font-weight: bold;
+    color: dodgerblue;
+}
+.status {
+    text-align: end;
+    margin-left: auto;
+    color: dodgerblue;
+    font-family: PT Times New Roman;
+    font-weight: bold;
+}
+.gradient {
+    background: linear-gradient(180deg, black, transparent);
+}
+.search_form{
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.15;
+    font-family: PT Sans,sans-serif;
+    font-size: 16px;
+    vertical-align: middle;
+    flex: 1 1 auto;
+    background: dodgerblue;
+    border-radius: 3px;
+    display: flex;
+    height: 44px;
+    position: relative;
+    width: 100%;
+}
+.search_input {
+    -webkit-text-size-adjust: 100%;
+    font-family: inherit;
+    outline-offset: -2px;
+    box-sizing: border-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 3px;
+    flex: 1 1 auto;
+    font-size: 16px;
+    height: 40px;
+    line-height: 22px;
+    margin: 2px 0 2px 2px;
+    min-width: 1px;
+    padding: 0 40px 0 8px;
+    z-index: 2;
+}
+.search_button {
+    -webkit-text-size-adjust: 100%;
+    font-family: inherit;
+    margin: 0;
+    font-weight: 700;
+    -webkit-appearance: button;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: dodgerblue;
+    border: none;
+    border-left: 1px solid dodgerblue;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 16px;
+    height: 44px;
+    letter-spacing: .5px;
+    line-height: 22px;
+    outline: none;
+    padding: 0 14px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.enter_button {
+    -webkit-text-size-adjust: 100%;
+    font-family: inherit;
+    margin: 0;
+    font-weight: 700;
+    -webkit-appearance: button;
+    box-sizing: border-box;
+    display: inline-block;
+    background-color: black;
+    border: none;
+
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 12px;
+    height: 30px;
+    letter-spacing: .5px;
+    line-height: 22px;
+    outline: none;
+    padding: 0 14px;
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+.down_section {
+
+}
+.separator {
+    -webkit-text-size-adjust: 100%;
+    font-family: PT Sans,sans-serif;
+    font-size: 16px;
+    color: #5e5e5e;
+    line-height: 20px;
+    text-align: left;
+    height: 1px;
+    width: 100%;
+    background: white;
+    opacity: 1;
+}
+.conteiner_contacts {
+    display: flex;
+}
+.socials {
+    margin-left: auto;
+}
+ /* Стили для контейнера меню */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Скрытое меню по умолчанию */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+/* Стили для ссылок внутри выпадающего меню */
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+}
+/* Показываем меню при наведении на контейнер */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.login {
+    text-align: center;
+}
+.form_login {
+    display: flex;
+    justify-content: center; /* Горизонталь */
+    align-items: center;    /* Вертикаль */
+    margin: 0;
+    flex-direction: column;
+    gap: 8px;
+}
+.centr_div {
+    width: 236px;
+}
+.table_login {
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}

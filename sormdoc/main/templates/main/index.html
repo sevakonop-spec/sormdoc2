@@ -1,0 +1,37 @@
+{% extends 'main/base.html' %}
+
+{% block title %} Главная страница {% endblock %}
+
+{% block content %}
+    <div class="main_content">
+        <div class="grid-item block search">
+             <form class="search_form" method="post">
+                 <input type="search" class="search_input" name="q" placeholder="Поиск: Шаблоны, нормативне документы, ТС ОРМ, новости и т.п.">
+                 <input type="submit" class="search_button" value="Найти">
+             </form>
+        </div>
+        <div class="grid-item block news">
+            <a class="header">Новости:</a>
+            <p>{{news}}</p>
+        </div>
+        <div class="grid-item block reclam_my">
+             {{hello}}
+        </div>
+        <div class="grid-item block npa">
+            Нормативные правовые документы: {{npa}}
+        </div>
+       <div class="grid-item block faqs">
+           Наиболее часто задаваемые вопросы: {{faqs}}
+       </div>
+        <div class="grid-item block example">
+             Шаблоны документов
+        </div>
+        <div class="grid-item block reclam">
+             Реклама
+        </div>
+        <div class="grid-item block ts">
+            Технические средства проведения ОРМ: {{ts}}
+        </div>
+
+    </div>
+{% endblock %}

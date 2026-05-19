@@ -1,0 +1,47 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %} Авторизация {% endblock %}
+
+{% block content %}
+<div class="login">
+    <div><img src="{% static 'images/user_pic.png' %}" height="32px">
+    <h2 class="head_text">Авторизация в системе</h2>
+    <div>
+      <form action="{% url 'user:login' %}" method="POST"  name="form"">
+          {% csrf_token %}
+          <div>
+          <table class="table_login">
+              <tr>
+                  <td>
+                      <label for="username">    Логин:</label>
+                  </td>
+                  <td>
+                      <input type="text" placeholder="Введите свой логин" id="username" name="username">
+                  </td>
+              </tr>
+                  <td>
+                      <label for="password" >Пароль:</label>
+                  </td>
+                  <td>
+                       <input type="password" placeholder="Введите свой Пароль" id="password" name="password">
+                  </td>
+          </table>
+          </div>
+        <div>
+          <input type="checkbox" id="checkbox" name="remember" value="On">
+          <label for="checkbox">Запомнить меня</label>
+            <!Реализовать чекбоск запомнить меня, пока просто заглушка!>
+        </div>
+        <div>
+          <input type="submit" value="Войти" class="enter_button">
+        </div>
+      </form>
+    </div>
+    <a href="{% url 'user:password_reset' %}">забыл пароль?</a>
+    <a href="{% url 'user:signup' %}" >У вас нет аккаунта?</a>
+  </div>
+</div>
+
+{% endblock %}
