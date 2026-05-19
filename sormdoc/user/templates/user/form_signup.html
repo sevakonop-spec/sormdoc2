@@ -2,8 +2,18 @@
   <table class="table_login">
     {% for field in form %}
       <tr>
-        <td style="vertical-align: top;">{{ field.label }}</td>
-        <td>{{ field }} <pre>{{ field.help_text }}</pre></td>
+        <td style="vertical-align: top; padding-right: 8px;">{{ field.label_tag }}</td>
+        <td>
+          {{ field }}
+          {% if field.help_text %}
+            <small class="help_text">{{ field.help_text }}</small>
+          {% endif %}
+          {% if field.errors %}
+            <ul class="form_errors">
+              {% for error in field.errors %}<li>{{ error }}</li>{% endfor %}
+            </ul>
+          {% endif %}
+        </td>
       </tr>
     {% endfor %}
   </table>

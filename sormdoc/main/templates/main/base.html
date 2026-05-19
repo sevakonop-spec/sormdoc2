@@ -36,7 +36,7 @@
         <div class="item_li_lk">
             {% if user.username %}
                 <div class="dropdown">
-                    <a class="item_a" href="4">{{user.username}}</a>
+                    <a class="item_a" href="4">{% if user.first_name or user.last_name %}{{ user.first_name }} {{ user.last_name }}{% else %}{{ user.username }}{% endif %}</a>
                     <div class="dropdown-content">
                         <a class="item_a" href="{% url 'user:profile' %}">Настройки</a>
                         <a class="item_a" href="{% url 'user:logout' %}">Выход</a>

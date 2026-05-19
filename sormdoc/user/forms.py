@@ -8,25 +8,29 @@ class UserEditForm(forms.ModelForm):
     class Meta:
         model = User
         fields = ['username', 'first_name', 'last_name', 'email']
+        labels = {
+            'username': 'Имя пользователя',
+            'first_name': 'Имя',
+            'last_name': 'Фамилия',
+            'email': 'Email',
+        }
 
 
 class ProfileEditForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = []
-
-
-class UserAndProfileEditForm(forms.Form):
-    user_form = UserEditForm()
-    profile_form = ProfileEditForm()
+        fields = ['patronymic', 'phone', 'telegram_id']
+        labels = {
+            'patronymic': 'Отчество',
+            'phone': 'Телефон',
+            'telegram_id': 'Telegram ID',
+        }
 
 
 class CustomUserCreationForm(UserCreationForm):
-    template_name = 'user/form_signup.html'
     class Meta:
         model = User
         fields = ['username', 'password1', 'password2']
-        template_name = 'form_signup.html'
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
