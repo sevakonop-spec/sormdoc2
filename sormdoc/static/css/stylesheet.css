@@ -310,3 +310,150 @@ a:hover {
     margin: 2px 0 0 0;
     text-align: left;
 }
+
+.errorlist {
+    list-style: none;
+    padding: 0;
+    margin: 8px 0 0 0;
+    color: #c62828;
+    font-size: 12px;
+    text-align: left;
+}
+
+.errorlist li {
+    margin-bottom: 4px;
+}
+
+.form-control,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #d0d5db;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+input[type="text"].is-invalid,
+input[type="password"].is-invalid,
+input[type="email"].is-invalid,
+input[type="tel"].is-invalid,
+textarea.is-invalid,
+select.is-invalid {
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 3px rgba(211, 47, 47, 0.08);
+}
+
+.profile-page {
+    padding: 30px 0 40px;
+}
+
+.profile-card {
+    max-width: 720px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+    padding: 24px 28px 20px;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-table {
+    width: 100%;
+    max-width: 620px;
+    border-spacing: 0 8px;
+}
+
+.profile-label-cell {
+    width: 190px;
+    text-align: left;
+    vertical-align: top;
+    padding-right: 12px;
+    color: #1c1c1c;
+    font-weight: 600;
+}
+
+.profile-field-cell {
+    text-align: left;
+}
+
+.profile-field-cell input,
+.profile-field-cell textarea,
+.profile-field-cell select {
+    width: 100%;
+    max-width: 320px;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #d0d5db;
+    border-radius: 8px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.profile-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-top: 18px;
+    width: 100%;
+    max-width: 620px;
+    flex-wrap: wrap;
+}
+
+.logout-link {
+    color: #0d3b66;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.logout-link:hover {
+    color: #d62828;
+}
+
+@media (max-width: 640px) {
+    .profile-card {
+        padding: 20px 14px;
+    }
+
+    .profile-table,
+    .profile-table tr,
+    .profile-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .profile-label-cell {
+        width: auto;
+        padding: 0 0 6px 0;
+    }
+
+    .profile-field-cell {
+        padding-bottom: 10px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+    }
+}

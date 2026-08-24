@@ -1,0 +1,61 @@
+{% extends 'main/base.html' %}
+
+{% load static %}
+
+{% block title %} Профиль пользователя {% endblock %}
+
+{% block content %}
+<div class="login profile-page">
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="{% static 'images/user_pic.png' %}" height="32px" alt="Профиль">
+            <h2 class="head_text">Профиль пользователя</h2>
+        </div>
+
+        <form method="post" class="profile-form">
+            {% csrf_token %}
+            <table class="table_login profile-table">
+                {% for field in user_form %}
+                <tr>
+                    <td class="profile-label-cell">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    </td>
+                    <td class="profile-field-cell">
+                        {{ field }}
+                        {% if field.help_text %}<small class="help_text">{{ field.help_text }}</small>{% endif %}
+                        {% if field.errors %}<ul class="form_errors">{% for e in field.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+
+                {% for field in profile_form %}
+                <tr>
+                    <td class="profile-label-cell">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    </td>
+                    <td class="profile-field-cell">
+                        {{ field }}
+                        {% if field.help_text %}<small class="help_text">{{ field.help_text }}</small>{% endif %}
+                        {% if field.errors %}<ul class="form_errors">{% for e in field.errors %}<li>{{ e }}</li>{% endfor %}</ul>{% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+
+            {% if user_form.non_field_errors %}
+            <ul class="form_errors">{% for e in user_form.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>
+            {% endif %}
+            {% if profile_form.non_field_errors %}
+            <ul class="form_errors">{% for e in profile_form.non_field_errors %}<li>{{ e }}</li>{% endfor %}</ul>
+            {% endif %}
+
+            <div class="profile-actions">
+                <input type="submit" value="Сохранить" class="enter_button">
+                <a href="{% url 'user:password_change' %}" class="logout-link">Сменить пароль</a>
+                <a href="{% url 'main:index' %}" class="logout-link">Вернуться на главную</a>
+                <a href="{% url 'user:logout' %}" class="logout-link">Выход</a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
